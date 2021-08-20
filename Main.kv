@@ -1,0 +1,319 @@
+#:import hex kivy.utils.get_color_from_hex
+#: import ButtonBehavior kivy.uix.behaviors.ButtonBehavior
+MDBoxLayout:
+    orientation: "vertical"
+    MDToolbar:
+        title: "25000F"
+        anchor_title: "center"
+        left_action_items: [["cog", lambda x: app.callback()]]
+        
+    ScrollView:
+        MDBoxLayout:
+            orientation: 'vertical'
+            #md_bg_color: hex('#1dc8ff')
+            md_bg_color: hex('#ffffff')
+            #pos_hint: {'center_x':.5}
+            #padding: 0, dp(100) 
+            MDBoxLayout:
+                orientation: 'vertical'
+                size_hint: 1, .5
+                md_bg_color: hex('#1dc8ff')
+                padding: dp(40)
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    md_bg_color: hex('#1dc8ff')
+                    #md_bg_color: hex('#1dc8ff')
+                    size_hint: .8, None
+                    height: self.width * .5
+
+                    pos_hint: {'center_x':.5}
+                    canvas:
+                        #pos_hint: {'center_x':.5 , 'center_y': .5}
+                        Color:
+                            rgb: 1, 1, 1, 1
+                        RoundedRectangle:
+                            size: self.size
+                            #pos: self.pos
+                            pos: self.pos
+                            #size: self.size
+                            #pos: self.center_x-400/2 , self.center_y-200/2
+                            source: "wave.jpg"
+                MDBoxLayout:
+
+
+            FloatLayout:
+                MDCard:
+                    size_hint: None, None
+                    size: "400dp", "100dp"
+                    pos_hint: {"center_x": .5, "center_y": 1}
+                    radius: [dp(10)]
+                    elevation: 30
+                    MDBoxLayout:
+                        orientation:'vertical'
+                        MDIcon:
+                            icon: 'account'
+                            font_size: sp(40)
+                            halign: "center"
+
+                        MDLabel:
+                            text: "Envoyer"
+                            font_size: sp(25)
+                            font_family: "ROBOTO"
+                            bold: True
+                            halign: "center"
+                
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: .8, .7
+                    #size: dp(600), dp(500)
+                    pos_hint: {"center_x": .5, "center_y":.5 }
+                    radius: [dp(10)]
+                    md_bg_color: hex('#efefef')
+                    elevation: 20
+                    ThreeLineAvatarIconListItem:
+                        text: "Three-line item with avatar"
+                        secondary_text: "Secondary text here"
+                        IconLeftWidget:
+                            icon: "language-python"
+                        IconRightWidget:
+                            icon: "language-python"
+                    ThreeLineAvatarIconListItem:
+                        text: "Three-line item with avatar"
+                        secondary_text: "Secondary text here"
+                        IconLeftWidget:
+                            icon: "language-python"
+                        IconRightWidget:
+                            icon: "language-python"
+                    ThreeLineAvatarIconListItem:
+                        text: "Three-line item with avatar"
+                        secondary_text: "Secondary text here"
+                        IconLeftWidget:
+                            icon: "language-python"
+                        IconRightWidget:
+                            icon: "language-python"
+                    ThreeLineAvatarIconListItem:
+                        text: "Three-line item with avatar"
+                        secondary_text: "Secondary text here"
+                        IconLeftWidget:
+                            icon: "language-python"
+                        IconRightWidget:
+                            icon: "language-python"
+                    ThreeLineAvatarIconListItem:
+                        text: "Three-line item with avatar"
+                        secondary_text: "Secondary text here"
+                        IconLeftWidget:
+                            icon: "language-python"
+                        IconRightWidget:
+                            icon: "language-python"
+                    ThreeLineAvatarIconListItem:
+                        text: "Three-line item with avatar"
+                        secondary_text: "Secondary text here"
+                        IconLeftWidget:
+                            icon: "language-python"
+                        IconRightWidget:
+                            icon: "language-python"
+                     
+            
+                    
+
+                        
+
+
+            
+            # NBtn:
+            #     pos_hint: {'center_x': .5, "center_y": .5}
+            #     text: "Envoyer de l'argent"
+            #     font_size: 50
+            
+
+            # MDBoxLayout:
+            #     md_bg_color: hex('#ffffff')
+            # MDScreen:
+            #     MDCard:
+            #         orientation: 'vertical'
+            #         size_hint: None, None
+            #         size: "600dp", "450dp"
+            #         pos_hint: {"center_x": .5, "center_y": .5}
+            #         raduis:[dp(10)]
+            #         TwoLineListItem:
+            #             text: "Two-line item"
+            #             secondary_text: "Secondary text here"
+            #         TwoLineListItem:
+            #             text: "Two-line item"
+            #             secondary_text: "Secondary text here"
+            #         TwoLineListItem:
+            #             text: "Two-line item"
+            #             secondary_text: "Secondary text here"
+            #         TwoLineListItem:
+            #             text: "Two-line item"
+            #             secondary_text: "Secondary text here"
+            #         TwoLineListItem:
+            #             text: "Two-line item"
+            #             secondary_text: "Secondary text here"
+            
+        
+<NBtn@ButtonBehavior+BoxLayout>:
+    text: ''
+    font_size: sp(14)
+    size_hint: None, None
+    size: dp(500), dp(80)
+    canvas.before:
+        Color:
+            rgb: hex("#000000")
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        text: root.text if root.text else ''
+        font_size: sp(21)
+        bold: True
+
+    
+
+        
+            
+
+            # size_hint: None, None
+            # height: self.width / 
+
+
+            
+            # canvas:
+            #     Color: 
+            #         rgb: 1, 0, 0, 1
+            #     RoundedRectangle:
+            #         size: self.size
+            #         pos:self.pos
+                     
+
+
+
+
+
+
+    # MDCard:
+    #     orientation: "vertical"
+    #     size_hint: .5, .1
+    #     pos_hint: {"center_x": .5, "center_y": .5}
+    #     md_bg_color: 0, 0, 0, 1
+    #     radius: [dp(10)]
+        
+    #     FitImage:
+    #         size_hint_y: 3
+    #         source: 'mongolfiere-cappadocia-260nw-1177982797.jpg'
+    #         radius: [dp(10), dp(10), 0, 0]
+            
+    #     Button:
+    #         text: "TECHNOLOGY"
+    #         size_hint: None, None
+    #         size: dp(100), dp(50)
+    #         radius: [dp(10), dp(10), dp(10), dp(10)]
+
+
+
+#PREMIERE IMAGE
+    # MDBoxLayout:
+    #     orientation: "vertical"
+    #     padding: "100dp"
+    #     MDCard:
+    #         id: idp
+    #         orientation: "vertical"
+    #         radius: [dp(10)]
+    #         FitImage:
+    #             size_hint_y: 3
+    #             source: 'MC125-Guadeloupe971-5.jpg'
+    #             radius: [dp(10), dp(10), 0, 0]
+    #             #radius: [dp(5)]
+    #         Button:
+    #             text: "More info"
+    #             font_size: 30
+    #             background_color:[0, 0, 0, 1]
+                
+    #             size_hint: 1, None
+    #             height: 100
+    #         FloatLayout:
+    #             pos_hint: {'center_x': .5}
+    #             size_hint: 1, None
+    #             height: 0
+    #             Label:
+    #                 text: 'The Beach'
+    #                 font_size: sp(50)
+    #                 halign: 'center'
+    #                 top: idp.top
+
+                
+            
+            
+
+    # Image:
+    #     source: "IMG_0137.JPG"
+    #     size: (100, 100)
+
+#FIN PREMIERE IMAGE
+
+
+#DEBUT DEUXIEMME IMAGE
+
+ #left_action_items: [["menu", lambda x: app.callback()]]
+    # ScrollView:
+    #     MDBoxLayout:
+    #         orientation: "vertical"
+    #         padding: 0, dp(20)
+    #         spacing: dp(20)
+    #         MDBoxLayout:
+                
+    #             size_hint: .5, None
+    #             height: self.width * 1.2
+    #             pos_hint: {'center_x':.5}
+    #             canvas:
+    #                 Color: 
+    #                     rgb: 1, 1, 1, 1
+    #                 RoundedRectangle:
+                        
+    #                     size: self.size
+    #                     pos:self.pos
+    #                     source:"MC125-Guadeloupe971-5.jpg"
+    #             MDBoxLayout:
+    #                 padding: dp(20), dp(10), dp(20), 0
+    #                 orientation: 'vertical'
+    #                 spacing: dp(10)
+    #                 size_hint: 1, None
+    #                 height: dp(200)
+    #                 pos: self.pos
+    #                 md_bg_color: 1, 1, 1, 1
+    #                 MDLabel:
+    #                     text: "TECHNOLOGY"
+    #                     size_hint_x: None
+    #                     size: dp(120), .7
+    #                     md_bg_color: 0/255.0, 255/255.0, 255/255.0, 1
+    #                     radius: [dp(10)]
+                        
+    #                 MDLabel:
+    #                     text: 'Why the Tesla Cybertruck designed the way it is?'
+    #                     bold: True
+    #                     font_size: dp(20)
+                        
+    #                 MDLabel:
+    #                     text: "An exploration into the truck's polarsing design"
+                    
+    #                 TwoLineAvatarListItem:
+    #                     text: "Two-line item with avatar"
+    #                     secondary_text: "Secondary text here"
+
+    #                     ImageLeftWidget:
+    #                         source: "IMG_0137.JPG"
+    #                         radius: [dp(30)]
+
+                        
+    #         MDBoxLayout:
+    
+    
+    
+    # FloatLayout:
+    #     canvas:
+    #         Color:
+    #             rgba: 1, 1, 1, 1
+    #         RoundedRectangle:
+    #             pos: self.pos
+    #             size: self.width
+    #             radius: [25, 25, 25, 25]                        
